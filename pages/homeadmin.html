@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Administración de Canciones</title>
+    <link rel="stylesheet" href="/css/homeadmin.css" />
+  </head>
+  <body>
+    <h1>Administración de Canciones</h1>
+
+    <!-- Tabla de canciones -->
+    <table id="tabla-canciones">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Artista</th>
+          <th>Género</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="cuerpo-tabla">
+        <!-- Aquí se insertarán las canciones dinámicamente -->
+      </tbody>
+    </table>
+
+    <!-- Formulario para agregar canciones -->
+    <h2>Agregar Nueva Canción</h2>
+    <form id="formulario-cancion">
+      <input type="text" id="nombre" placeholder="Nombre" />
+      <input type="text" id="artista" placeholder="Artista" />
+      <input type="text" id="genero" placeholder="Género" />
+      <button type="submit">Agregar</button>
+    </form>
+
+    <script src="/js/homeadmin.js"></script>
+  </body>
+</html>

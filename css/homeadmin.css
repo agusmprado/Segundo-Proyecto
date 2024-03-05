@@ -1,0 +1,45 @@
+/* styles.css */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: black;
+  color: white;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table,
+th,
+td {
+  border: 1px solid #ddd;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: black;
+}
+
+input[type="text"],
+button {
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 8px 12px;
+  background-color: #1358ab;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1358ab;
+}
