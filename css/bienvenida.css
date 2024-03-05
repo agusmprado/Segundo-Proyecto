@@ -127,7 +127,7 @@ section#hare{
     .navbar{
         display: none;
     }
-    #carouselExampleCaptions{
+    .carousel-inner{
         display: none;
     }
       .banner {
