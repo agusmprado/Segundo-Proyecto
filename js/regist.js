@@ -45,7 +45,7 @@ const enviarformulario = (e) => {
                 id: idUsuario,
                 nombreUsuario: inputUsuario.value,
                 contrasenia: inputContrasenia.value,
-                rol: `usuario`,
+                rol: `admin`,
                 deleted: false,//nborrado logico
                 login: true//deriva diectamente a la pagina del isuario
             }
@@ -62,7 +62,7 @@ const enviarformulario = (e) => {
                 id: 1,
                 nombreUsuario: inputUsuario.value,
                 contrasenia: inputContrasenia.value,
-                rol: `usuario`,
+                rol: `admin`,
                 deleted: false,//nborrado logico
                 login: true//deriva diectamente a la pagina del isuario
             }
