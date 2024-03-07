@@ -1,36 +1,40 @@
 *{
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
 }
 
 html {
-  font-size: 62.5%;
-  font-family:
+height: 100%;
+font-size: 62.5%;
 }
 
 body{
-  font-size: 1.6rem;
-  height: 100vh;
-  background-color: #1358ab;
+display: flex;
+flex-direction: column;
+min-height: 100%;
+background-color: #151618;
 }
 
 footer{
-  background-color: #151618;
-  margin-top: 10rem;
+  margin-top: auto;
+background-color:rgba(0, 123, 255, 0.014);
 }
+
+
 
 
 .navegacion{ 
-  background-color: #151618;
-  color: white
+background-color: rgba(0, 123, 255, 0.014);
+color: white
 }
 .dropdown-menu{
-  background-color: #151618;
+background-color: #151618;
 }
 
 .dropdown-item{
-  background-color: #151618;
+background-color: #151618;
 }
 
 
@@ -112,7 +116,7 @@ footer{
 .tranding-slide .tranding-slide-img img {
   width: 25rem;
   height: 25rem;
-  border-radius: ;
+  border-radius: 5px ;
   object-fit: cover;
 }
 
