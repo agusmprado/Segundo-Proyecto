@@ -33,7 +33,7 @@ const enviarformulario = (e) => {
         }
 
         usuarioLocalStorage[usuarioIndex].login = true;
-        localStorage.setItem(`usuarios`, -JSON.stringify(usuarioExistente));
+        localStorage.setItem(`usuarios`, -JSON.stringify(usuarioLocalStorage));
         sessionStorage.setItem(`usuarioLogiado`, JSON.stringify(usuarioIndex));
 
         if(usuarioExistente.rol === `admin`){
