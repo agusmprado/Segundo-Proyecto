@@ -65,6 +65,15 @@ background-color: #151618;
   transform: scale(1.05);
 }
 
+.btn{
+  border-radius: 10px;
+  border-color: #fff;
+}
+
+.btn:hover{
+  background-color: #1358ab;
+}
+
 @media (min-width: 1440px) {
   html {
     zoom: 1.5;
