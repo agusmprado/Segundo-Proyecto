@@ -55,6 +55,16 @@ background-color: #151618;
   background-color: #1358ab;
 }
 
+.cardCancion{
+  background-color: transparent;
+  color: #fff;
+  transition: transform 0.3s;
+}
+
+.cardCancion:hover{
+  transform: scale(1.05);
+}
+
 @media (min-width: 1440px) {
   html {
     zoom: 1.5;
@@ -71,6 +81,10 @@ background-color: #151618;
   html {
     zoom: 2.5;
   }
+}
+
+.nav-link .icon {
+  color: blue; /* Cambia el color del icono aquí */
 }
 
 .section-heading {

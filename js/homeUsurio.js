@@ -56,7 +56,9 @@ divPlaylist2.innerHTML = Playlist.map((cancion) => `
 </div>
 `).join(``)
 
-
+const redirectTo = () => {
+  window.location.href = `../pages/music.html`;
+}
 
 var TrandingSlider = new Swiper('.tranding-slider', {
     effect: 'coverflow',
