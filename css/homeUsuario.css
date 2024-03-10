@@ -83,6 +83,10 @@ background-color: #151618;
   }
 }
 
+.nav-link .icon {
+  color: blue; /* Cambia el color del icono aquí */
+}
+
 .section-heading {
   font-size: 3rem;
   color: #151618;
