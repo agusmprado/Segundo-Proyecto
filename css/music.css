@@ -4,3 +4,36 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+body {
+    padding-top: 50px;
+  }
+  
+  .color{
+    background-color: #151618;
+  }
+  .song-details {
+    background-color: #1358ab;
+    border-radius: 10px;
+    
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .song-details img {
+    max-width: 100%;
+    border-radius: 1px;
+  }
+  .song-details h3,
+  .song-details p {
+    margin-bottom: 10px;
+  }
+  .song-details audio {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .centrar{
+    display: flex;
+    justify-content: center;
+  }

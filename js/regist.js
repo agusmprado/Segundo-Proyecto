@@ -54,6 +54,7 @@ const enviarformulario = (e) => {
             localStorage.setItem(`usuarios`, JSON.stringify(usuarioLocalStorage));
 
             setTimeout(() => {
+                
                 location.href= `../pages/homeUsuario`//escribir la pagina del usuario 
             },1000)
  

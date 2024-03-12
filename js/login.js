@@ -1,11 +1,11 @@
-const inputUsuario = document.getElementById(`usuarioL`)
-const inputContrasenia = document.getElementById(`ContraseniaL`)
+const inputUsuario = document.getElementById(`usuario`)
+const inputContrasenia = document.getElementById(`Contrasenia`)
 
-const botonIniciaSesion = document.getElementById(`IniciaSesion`)
-const inputRegistrarse = document.getElementById(`sign-upL`)
+const botonIniciarSesion = document.getElementById(`IniciaSesion`)
+const botonRegistrarse = document.getElementById(`sign-in`)
 
 const usuarioLocalStorage = JSON.parse(localStorage.getItem(`usuarios`)) || []
-
+ 
 const enviarformulario = (e) => {
     e.preventDefault();
     if(!inputUsuario.value && !inputContrasenia.value){
@@ -17,13 +17,38 @@ const enviarformulario = (e) => {
     }else if(!inputContrasenia.value){
         swal(`Por favor, ingrese contraseña para continuar.`)
     }
+    if(inputUsuario.value && inputContrasenia.value){
+
+        const usuarioExistente = usuarioLocalStorage.find(
+            (usuario)=> usuario.nombreUsuario === inputUsuario.value)
+        const usuarioIndex = usuarioLocalStorage.findIndex(
+            (usuario) => usuario.nombreUsuario === inputUsuario.value )    
+
+        if(!usuarioExistente){
+            return swal(`usuario y/o contraseña incorrecta/ u`)
+        }
+
+        if(inputContrasenia.value !== usuarioExistente.contrasenia){
+            return swal(`usuario y/o contraseña incorrecto / c`)
+        }
+
+        usuarioLocalStorage[usuarioIndex].login = true;
+        localStorage.setItem(`usuarios`, -JSON.stringify(usuarioLocalStorage));
+        sessionStorage.setItem(`usuarioLogiado`, JSON.stringify(usuarioIndex));
+
+        if(usuarioExistente.rol === `admin`){
+            location.href = `../pages/homeadmin.html`
+        }else{
+            location.href = `../pages/homeUsuario.html`
+        }
+    }
 }
 
-const direccionarRegister = (e) => {
-    setTimeout(() => {
-        location.href= `../pages/register.html`
-    },1000)
+
+const direccionamientoRegistrarse = () => {
+    location.href = `../pages/register.html`
 }
 
-botonIniciaSesion.addEventListener(`click`, enviarformulario);
-inputRegistrarse.addEventListener(`click`, direccionarRegister)
+botonIniciarSesion.addEventListener(`click`, enviarformulario)
+botonRegistrarse.addEventListener(`click`, direccionamientoRegistrarse)
+
