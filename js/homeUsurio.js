@@ -3,6 +3,8 @@ const divPlaylist = document.getElementById(`Playlist`);
 const divPlaylist2 = document.getElementById(`Playlist2`);
 const divMusicusicReciente = document.getElementById(`musicReciente`);
 const listArtists = document.getElementById("listArtists")
+const usarioLocalStorage = JSON.parse(localStorage.getItem("usuarios"))
+
 
 const productos = [
   { img: `../imagenHomeUsuario/peso-pluma.webp`, nombre: `Peso Pluma` },
@@ -34,12 +36,12 @@ divProductos.innerHTML = productos
   .join("");
 
 const Playlist = [
-  { img: `../imagenHomeUsuario/7 - copia.webp` },
-  { img: `../imagenHomeUsuario/8 - copia.webp` },
-  { img: `../imagenHomeUsuario/9.webp` },
-  { img: `../imagenHomeUsuario/10.webp` },
-  { img: `../imagenHomeUsuario/11.webp` },
-  { img: `../imagenHomeUsuario/12.webp` },
+  { img: `../img/portada/re discover bizza.webp` },
+  { img: `../img/portada/j balbin.webp` },
+  { img: `../img/portada/Dua lipa.webp` },
+  { img: `../img/portada/re discover duki.webp` },
+  { img: `../img/portada/re discover tiago.webp` },
+  { img: `../img/portada/re discover la t y la m.webp` },
 ];
 
 divPlaylist.innerHTML = Playlist.map(
@@ -61,7 +63,7 @@ const Playlist2 = [
   { img: `../imagenHomeUsuario/6.webp` },
 ];
 
-divPlaylist2.innerHTML = Playlist.map(
+divPlaylist2.innerHTML = Playlist2.map(
   (cancion) => `
 <div class='col-12 col-md-4 col-lg-2 my-3'>
    <div class="card-dark d-flex justify-content-center align-content-center">
@@ -87,7 +89,7 @@ divMusicusicReciente.innerHTML = musica.map((cancion) => `
   <img src="${cancion.img}" class="img-fluid" alt="Imagen 3">
   </div>
  <div class="card-body">
-  <p class="ms-5">${cancion.nombre}}</p>
+  <p class="ms-5">${cancion.nombre}</p>
   <p class="ms-5">${cancion.artista}</p>
   <a href="../pages/music.html?id=${cancion.id}" class="text-decoration-none text-white ms-5 btn">Volver a Escuchar</a>
  </div>
@@ -100,9 +102,6 @@ divMusicusicReciente.innerHTML = musica.map((cancion) => `
   const musicaLocalStorage = localStorage.setItem(`cancion`, JSON.stringify(musica));
  
 
-// const redirectTo = () => {
-//   window.location.href = `../pages/music.html?id=${cancion.id}`;
-// };
 
 const TrandingSlider = new Swiper(".tranding-slider", {
   effect: "coverflow",
@@ -140,10 +139,15 @@ document.addEventListener("DOMContentLoaded", function(){
   }
     
   })
-
-
 })
-  
+
+const cerrarSesion = () => {
+    
+  setTimeout(() => {
+      location.href = '../index.html'
+  }, 1500)
+}
+
 
 
   
