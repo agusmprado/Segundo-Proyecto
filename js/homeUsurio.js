@@ -2,6 +2,7 @@ const divProductos = document.getElementById("divProductos");
 const divPlaylist = document.getElementById(`Playlist`);
 const divPlaylist2 = document.getElementById(`Playlist2`);
 const divMusicusicReciente = document.getElementById(`musicReciente`);
+const listArtists = document.getElementById("listArtists")
 
 const productos = [
   { img: `../imagenHomeUsuario/peso-pluma.webp`, nombre: `Peso Pluma` },
@@ -14,6 +15,8 @@ const productos = [
   { img: `../imagenHomeUsuario/karolG.webp`, nombre: `Karol G` },
   { img: `../imagenHomeUsuario/natanaelCano.webp`, nombre: `Natanael Cano` },
 ];
+
+const artists = ["Duki", "Emilia Mernes", "Peso Pluma", "Bad Bunny" ,"Karol G", "Maria Becerra", "Tiago PZK", "Cuartetazo", "Cachengue", "Folklore", "Cumabias Argentinas","Reggaeton Viejo"]
 
 divProductos.innerHTML = productos
   .map(
@@ -119,3 +122,34 @@ const TrandingSlider = new Swiper(".tranding-slider", {
   },
   
 });
+
+
+document.addEventListener("DOMContentLoaded", function(){
+  const searchInput = document.getElementById("searchInput")
+  searchInput.addEventListener("input" , function(){
+    const searchTerm = searchInput.value.toLowerCase()
+    listArtists.innerHTML = ""
+
+    if (searchTerm.length > 0) {
+      const filteredItems = artists.filter(function(item) {
+          return item.toLowerCase().startsWith(searchTerm);
+      });
+
+      filteredItems.forEach(function(item) {
+          const li = document.createElement('div');
+          li.textContent = item;
+          li.classList.add("itemSearch")
+          listArtists.appendChild(li);
+      });
+  }
+    
+  })
+
+
+})
+  
+
+
+  
+
+
