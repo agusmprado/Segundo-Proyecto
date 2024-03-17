@@ -72,41 +72,37 @@ divPlaylist2.innerHTML = Playlist.map(
 ).join(``);
 
 const musica = [
-  {
-    img: `../imagenHomeUsuario/mr1.webp`,
-    nombre: `La Diabla`,
-    artista: `Xavi`,
-    id: 1,
-  },
-  { img: `../imagenHomeUsuario/mr3.webp`, nombre: ``, artista: ``, id: 3 },
-  { img: `../imagenHomeUsuario/mr2.webp`, nombre: ``, artista: ``, id: 2 },
-  { img: `../imagenHomeUsuario/mr4.webp`, nombre: ``, artista: ``, id: 4 },
-  { img: `../imagenHomeUsuario/mr5.webp`, nombre: ``, artista: ``, id: 5 },
-  { img: `../imagenHomeUsuario/mr6.webp`, nombre: ``, artista: ``, id: 6 },
+  {img: `../imagenHomeUsuario/mr1.webp`, nombre: `La Diabla`, artista: `Xavi`,  id: 1},
+  { img: `../imagenHomeUsuario/mr3.webp`, nombre: `Te Quiero`, artista: `Hombre G & Carin Leon`, id: 3 },
+  { img: `../imagenHomeUsuario/mr2.webp`, nombre: `Primera Cita`, artista: `Carin Leon`, id: 2 },
+  { img: `../imagenHomeUsuario/mr7.webp`, nombre: `El comienzo de su vida`, artista: `Grupo Frontera y Grupo Firme`, id: 4 },
+  { img: `../imagenHomeUsuario/mr5.webp`, nombre: `Contigo`, artista: `Karon G`, id: 5 },
+  { img: `../imagenHomeUsuario/mr6.webp`, nombre: `Fresas de la Capital`, artista: `Oscar Maylon`, id: 6 },
 ];
 
-divMusicusicReciente.innerHTML = musica
-  .map(
-    (cancion) => `
+divMusicusicReciente.innerHTML = musica.map((cancion) => `
 <div class="col-lg-4 col-md-4 col-12 m-5">
-<div class="cardCancion d-flex flex-row justify-content-center aling-content-center" id="musicReciente" onclick="redirectTo()">
-<div class="card-img-container">
+ <div class="cardCancion d-flex flex-row justify-content-center aling-content-center" id="musicReciente" onclick="redirectTo()">
+  <div class="card-img-container">
   <img src="${cancion.img}" class="img-fluid" alt="Imagen 3">
-</div>
-<div class="card-body">
-  <p class="ms-5">${musica.nombre}}</p>
-  <p class="ms-5">${musica.artista}</p>
+  </div>
+ <div class="card-body">
+  <p class="ms-5">${cancion.nombre}}</p>
+  <p class="ms-5">${cancion.artista}</p>
   <a href="../pages/music.html?id=${cancion.id}" class="text-decoration-none text-white ms-5 btn">Volver a Escuchar</a>
-</div>
-</div>
+ </div>
+ </div>
 </div>
 `
   )
   .join(``);
+//guarde el array de musica en el localStorage
+  const musicaLocalStorage = localStorage.setItem(`cancion`, JSON.stringify(musica));
+ 
 
-const redirectTo = () => {
-  window.location.href = `../pages/music.html?id=${cancion.id}`;
-};
+// const redirectTo = () => {
+//   window.location.href = `../pages/music.html?id=${cancion.id}`;
+// };
 
 const TrandingSlider = new Swiper(".tranding-slider", {
   effect: "coverflow",

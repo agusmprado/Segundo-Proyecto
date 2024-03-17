@@ -1,5 +1,7 @@
 /* styles.css */
 
+
+
 body {
   font-family: Arial, sans-serif;
   background-color: black;
@@ -42,4 +44,21 @@ button {
 
 button:hover {
   background-color: #1358ab;
+  color: #0c4488;
+}
+
+
+.modal{
+  color: #1358ab;
+}
+
+.btn{
+  background-color: #1358ab;
+  color: #fff;
+  border: solid #1358ab;
+}
+
+.btn:hover{
+  background-color: #151618;
+  
 }

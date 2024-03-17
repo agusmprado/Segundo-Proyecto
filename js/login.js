@@ -5,6 +5,7 @@ const botonIniciarSesion = document.getElementById(`IniciaSesion`)
 const botonRegistrarse = document.getElementById(`sign-in`)
 
 const usuarioLocalStorage = JSON.parse(localStorage.getItem(`usuarios`)) || []
+const adminLocalStorage = JSON.parse(localStorage.getItem("admin"));
  
 const enviarformulario = (e) => {
     e.preventDefault();
@@ -24,7 +25,11 @@ const enviarformulario = (e) => {
         const usuarioIndex = usuarioLocalStorage.findIndex(
             (usuario) => usuario.nombreUsuario === inputUsuario.value )    
 
-        if(!usuarioExistente){
+        if(!usuarioExistente ){
+            if (inputPass.value === adminLocalStorage.pass) {
+                location.href = "../pages/homeadmin.html";
+                return;
+              }
             return swal(`usuario y/o contraseña incorrecta/ u`)
         }
 
@@ -33,10 +38,10 @@ const enviarformulario = (e) => {
         }
 
         usuarioLocalStorage[usuarioIndex].login = true;
-        localStorage.setItem(`usuarios`, -JSON.stringify(usuarioLocalStorage));
+        localStorage.setItem(`usuarios`, JSON.stringify(usuarioLocalStorage));
         sessionStorage.setItem(`usuarioLogiado`, JSON.stringify(usuarioIndex));
 
-        if(usuarioExistente.rol === `admin`){
+        if(usuarioExistente.rol === `administrador`){
             location.href = `../pages/homeadmin.html`
         }else{
             location.href = `../pages/homeUsuario.html`
