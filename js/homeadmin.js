@@ -1,8 +1,11 @@
 // scripts.js
 
+
 const tablaCanciones = document.getElementById("tabla-canciones");
 const cuerpoTabla = document.getElementById("cuerpo-tabla");
 const formularioCancion = document.getElementById("formulario-cancion");
+
+const otenerCancion = JSON.parse(localStorage.getItem(`cancion`)) || []
 
 // Ejemplo de datos de canciones
 const canciones = [
