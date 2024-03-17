@@ -83,28 +83,7 @@ const direccionarLogin = (e) => {
     },1000)
 }
 
-const validarCampo = (ev)=> {
-    ev.preventDefault();
-    const { name, value } = ev.target
-    if (name === 'usuario') {
-        if (value.length < 4) {
-            swal(`Por favor, ingrese mas carecteres a su nombre de usuario`)
-        }
-    }
-}
-
-const validarCampoContrasenia= (ev)=> {
-    ev.preventDefault();
-    const { name, value } = ev.target
-    if(name === `Contrasenia`){
-        if(value.length < 4){
-            swal(`Por favor, ingrese mas carecteres a su contraseña`)
-        }
-    }
-}
-
 botonRegistrarse.addEventListener(`click`, enviarformulario);
 inputIniciarSesion.addEventListener(`click`, direccionarLogin)
-inputUsuario.addEventListener(`change`, validarCampo)
-inputContrasenia.addEventListener(`change`, validarCampoContrasenia)
+
 

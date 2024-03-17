@@ -1,5 +1,6 @@
 // scripts.js
 
+
 const tablaCanciones = document.getElementById("tabla-canciones");
 const cuerpoTabla = document.getElementById("cuerpo-tabla");
 const formularioCancion = document.getElementById("formulario-cancion");
@@ -7,12 +8,12 @@ const formularioCancion = document.getElementById("formulario-cancion");
 const otenerCancion = JSON.parse(localStorage.getItem(`cancion`)) || []
 
 // Ejemplo de datos de canciones
-// const canciones = [
-//   { nombre: "Canción 1", artista: "Artista 1", genero: "Género 1" },
-//   { nombre: "Canción 2", artista: "Artista 2", genero: "Género 2" },
-//   { nombre: "Canción 3", artista: "Artista 3", genero: "Género 3" },
-//   { nombre: "Canción 4", artista: "Artista 4", genero: "Género 4" },
-// ];
+const canciones = [
+  { nombre: "Canción 1", artista: "Artista 1", genero: "Género 1" },
+  { nombre: "Canción 2", artista: "Artista 2", genero: "Género 2" },
+  { nombre: "Canción 3", artista: "Artista 3", genero: "Género 3" },
+  { nombre: "Canción 4", artista: "Artista 4", genero: "Género 4" },
+];
 
 // Función para cargar las canciones en la tabla
 function cargarCanciones() {
