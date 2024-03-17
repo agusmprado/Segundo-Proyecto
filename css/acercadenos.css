@@ -1,0 +1,33 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #1358ab;
+  margin: 200px;
+  font-size: large;
+}
+
+.equipo {
+  margin: 50px auto;
+}
+
+.galeria {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circulo {
+  width: 200px; /* Ajusta el tamaño según lo necesites */
+  height: 200px; /* Ajusta el tamaño según lo necesites */
+  border-radius: 50%; /* Hace que el borde sea circular */
+  overflow: hidden; /* Oculta cualquier contenido que se desborde */
+}
+
+.circulo img {
+  width: 100%; /* Ajusta el tamaño de la imagen para que ocupe todo el círculo */
+  height: 100%; /* Ajusta el tamaño de la imagen para que ocupe todo el círculo */
+  object-fit: cover; /* Ajusta la imagen para cubrir el contenedor */
+}
+p {
+  margin: 50px;
+}
