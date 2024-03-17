@@ -34,7 +34,7 @@
                   <a class="nav-link active text-white" aria-current="page" href="#">Inicio</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-white" href="#">Categorias</a>
+                  <a class="nav-link text-white" href="">Categorias</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -46,9 +46,12 @@
                   </ul>
                 </li>
               </ul>
-              <form class="d-flex me-auto" role="search">
-                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-                <button class="btn btn-outline-white text-white" type="submit">Buscar</button>
+              <form class="d-flex me-auto searchContainer">
+                <input class="form-control me-2" type="text" id="searchInput" placeholder="Buscar">
+                <div id="listArtists">
+
+                </div>
+                <!-- <button class="btn btn-outline-white text-white" type="submit">Buscar</button> -->
               </form>
               <ul class="navbar-nav me-2 mb-2 mb-lg-0">
                 <li class="nav-item">
@@ -63,9 +66,25 @@
     </header>
 
     <main>
+      <div>
+        <!-- <ul id="listArtists"> -->
+          <!-- <li class="articulo"><a href="">Duki</a></li>
+          <li class="articulo"><a href="">Peso Pluma</a></li>
+          <li class="articulo"><a href="">Bad Bunny</a></li>
+          <li class="articulo"><a href="">Karol G</a></li>
+          <li class="articulo"><a href="">Cuartetazo</a></li>
+          <li class="articulo"><a href="">Cachengue</a></li>
+          <li class="articulo"><a href="">Maria Becerra</a></li>
+          <li class="articulo"><a href="">Folklore</a></li>
+          <li class="articulo"><a href="">Cumbias Argentinas</a></li>
+          <li class="articulo"><a href="">Emilia Mernes</a></li>
+          <li class="articulo"><a href="">Tiago Pzk</a></li>
+          <li class="articulo"><a href="">Reggaeton</a></li> -->
+      <!-- </ul> -->
+      </div>
 
      <section>
-      <h3  class="text-light ms-5">Recien Escuchado</h3>
+      <h3  class="text-light ms-5 mt-5">Recien Escuchado</h3>
       <div class="container my-3 " >
            <div class="row d-flex justify-content-center align-items-center" id="musicReciente">
                 </div>
