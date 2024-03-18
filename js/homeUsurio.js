@@ -47,7 +47,7 @@ divPlaylist.innerHTML = Playlist.map(
   <div class='col-12 col-md-4 col-lg-2 my-3'>
      <div class="card-dark cardCancio d-flex justify-content-center align-content-center">
        <img src="${cancion.img}" class="img-fluid" alt="...">
-     </div>
+       <a class="text-decoration-none">Escucha aqui</a>
  </div>
 `
 ).join(``);
@@ -87,7 +87,7 @@ divMusicusicReciente.innerHTML = musica.map((cancion) => `
   <img src="${cancion.img}" class="img-fluid" alt="Imagen 3">
   </div>
  <div class="card-body">
-  <p class="ms-5">${cancion.nombre}}</p>
+  <p class="ms-5">${cancion.nombre}</p>
   <p class="ms-5">${cancion.artista}</p>
   <a href="../pages/music.html?id=${cancion.id}" class="text-decoration-none text-white ms-5 btn">Volver a Escuchar</a>
  </div>
