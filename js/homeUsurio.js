@@ -18,20 +18,20 @@ const productos = [
 
 const artists = ["Duki", "Emilia Mernes", "Peso Pluma", "Bad Bunny" ,"Karol G", "Maria Becerra", "Tiago PZK", "Cuartetazo", "Cachengue", "Folklore", "Cumabias Argentinas","Reggaeton Viejo"]
 
-divProductos.innerHTML = productos
-  .map(
-    (producto) => `
-  <div class='col-12 col-md-4 col-lg-2'>
-    <div class= "d-flex justify-content-center align-content-center">
-    <div class="card-dark">
-    <img src="${producto.img}" class="rounded-circle " alt="...">
-    <h3 class="d-flex justify-content-center align-content-center my-3 text-white">${producto.nombre}</h3>
-    </div>
-    </div>
- </div>
-`
-  )
-  .join("");
+// divProductos.innerHTML = productos
+//   .map(
+//     (producto) => `
+//   <div class='col-12 col-md-4 col-lg-2'>
+//     <div class= "d-flex justify-content-center align-content-center">
+//     <div class="card-dark">
+//     <img src="${producto.img}" class="rounded-circle " alt="...">
+//     <h3 class="d-flex justify-content-center align-content-center my-3 text-white">${producto.nombre}</h3>
+//     </div>
+//     </div>
+//  </div>
+// `
+//   )
+//   .join("");
 
 const Playlist = [
   { img: `../imagenHomeUsuario/7 - copia.webp` },
