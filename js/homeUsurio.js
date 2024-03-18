@@ -47,7 +47,6 @@ divPlaylist.innerHTML = Playlist.map(
   <div class='col-12 col-md-4 col-lg-2 my-3'>
      <div class="card-dark cardCancio d-flex justify-content-center align-content-center">
        <img src="${cancion.img}" class="img-fluid" alt="...">
-       <a class="text-decoration-none">Escucha aqui</a>
  </div>
 `
 ).join(``);
