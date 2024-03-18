@@ -50,6 +50,12 @@ background-color: #151618;
   text-decoration: none;
 }
 
+.cerrarSeccion{
+  background-color: transparent;
+  border: solid transparent;
+  color: #fff;
+}
+
 
 .navbar-toggler {
   background-color: #1358ab;
