@@ -143,9 +143,24 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
 })
-  
 
-
+const usuariosLocalStorage = JSON.parse(localStorage.getItem('usuarios')) || []
   
+const cerrarSeccion = () => {
+
+  usuariosLocalStorage.find((usuario) => {
+    if(usuario.login){
+      usuario.login= false
+      return usuario
+    }
+    localStorage.setItem(`usuarios`, JSON.stringify(usuariosLocalStorage))
+
+  })
+  setTimeout(() => {
+    location.href = '../index.html'
+}, 1000)
+
+}
+
 
 
